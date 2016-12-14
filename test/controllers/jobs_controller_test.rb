@@ -1,7 +1,9 @@
 require 'test_helper'
 
-class JobsControllerTest < ActionController::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+class JobsControllerTest < ActionDispatch::IntegrationTest
+  test "should get index" do
+    get jobs_index_url
+    assert_response :success
+  end
+
 end
